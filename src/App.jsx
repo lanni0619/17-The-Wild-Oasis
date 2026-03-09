@@ -3,6 +3,7 @@ import GlobalStyles from './styles/GlobalStyles';
 import Button from './ui/Button';
 import Input from './ui/Input';
 import Heading from './ui/Heading';
+import Row from './ui/Row';
 
 const StyledApp = styled.div`
     background-color: white;
@@ -14,14 +15,40 @@ function App() {
         <>
             <GlobalStyles />
             <StyledApp>
-                <Heading type="h1">The Wild Oasis</Heading>
+                <Row>
+                    <Row type="horizontal">
+                        <Heading as="h1">The Wild Oasis</Heading>
+                        <div>
+                            <Heading as="h2">Check in & out</Heading>
+                            <Button
+                                onClick={() => alert('Check in')}
+                            >
+                                Check in
+                            </Button>
+                            <Button
+                                variation="secondary"
+                                size="medium"
+                                onClick={() => alert('Check out')}
+                            >
+                                Check out
+                            </Button>
+                        </div>
+                    </Row>
 
-                <Heading type="h2">Check in & out</Heading>
-                <Button onClick={() => alert('Check in')}>Check in</Button>
-                <Button onClick={() => alert('Check in')}>Check in</Button>
-                
-                <Heading as="h3">Form</Heading>
-                <Input type="number" placeholder="Number of guests"></Input>
+                    <Row>
+                        <Heading as="h3">Form</Heading>
+                        <form>
+                            <Input
+                                type="number"
+                                placeholder="Number of guests"
+                            ></Input>
+                            <Input
+                                type="number"
+                                placeholder="Number of guests"
+                            ></Input>
+                        </form>
+                    </Row>
+                </Row>
             </StyledApp>
         </>
     );
