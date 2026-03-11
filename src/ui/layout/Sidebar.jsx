@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Logo from '../Logo';
-import MainNav from '../MainNav';
+import Logo from '../sidebar/Logo';
+import MainNav from '../sidebar/MainNav';
 
 const StyledSidebar = styled.header`
     background-color: var(--color-grey-0);
